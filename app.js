@@ -94,6 +94,8 @@ app.use(express.json());
  
 
   app.post('/setData', async (req, res) => {
+
+   console.log("post started");
    const { major, num, name } = req.body;
   
    const accountAddress = '0x100c2597E8e56d0f409D8f7f72CBA1FF5823589d';
