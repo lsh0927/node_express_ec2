@@ -94,12 +94,12 @@ app.use(express.json());
  
 
   app.post('/setData', async (req, res) => {
-   const { person, vote, time } = req.body;
+   const { major, num, name } = req.body;
   
    const accountAddress = '0x100c2597E8e56d0f409D8f7f72CBA1FF5823589d';
-   const value1 = await contract.methods.setMessage(person).send({ from: accountAddress });
-   const value2 = await contract.methods.setMessage(vote).send({ from: accountAddress });
-   const value3 = await contract.methods.setMessage(time).send({ from: accountAddress });
+   const value1 = await contract.methods.setMessage(major).send({ from: accountAddress });
+   const value2 = await contract.methods.setMessage(num).send({ from: accountAddress });
+   const value3 = await contract.methods.setMessage(name).send({ from: accountAddress });
    currentTxData = txdata;
    const decodedData = abiDecoder.decodeMethod(currentTxData);
    contract.methods.getMessage().call()
@@ -107,14 +107,14 @@ app.use(express.json());
 
 
    const data = {
-      person: result.person,
-      vote: result.vote,
-      time: result.time
+      major: result.major,
+      num: result.num,
+      name: result.name
      };
       // Format the data as necessary
-     const formattedData1 = person
-     const formattedData2 = vote;
-     const formattedData3 = time;
+     const formattedData1 = major
+     const formattedData2 = num;
+     const formattedData3 = name;
 
      //console.log(vae);
 
