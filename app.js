@@ -9,7 +9,7 @@ import Web3 from 'web3';
 //const abiDecoder = require('abi-decoder');
 import abiDecoder from 'abi-decoder';
 
-const web3 = new Web3('http://59.6.236.50:7545');
+const web3 = new Web3('http://localhost:7545');
 const contractAddress = 
 '0xc424135F2849F59028b7FA30f99e7560BFd4E271'; // Replace with the address of your deployed 
 
@@ -127,12 +127,12 @@ app.use(express.json());
      console.log(formattedData1);//그 다음 블럭의 tx data를 자동으로 가리키도록 해야함/
      console.log(formattedData2);
      console.log(formattedData3);
-     console.log(decodedData);
+     //console.log(decodedData);
     // for(let i = 0; i < 3; i++) {
-      res.send(person,vote,time);
+     //res.send(person,vote,time);
    
    //}
-     //res.send();
+     res.send();
    })
    .catch(error => console.error(error));
   
