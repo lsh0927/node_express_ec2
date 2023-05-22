@@ -6,7 +6,7 @@ const app = express();
 import Web3 from 'web3';
 
 // 나머지 코드...
-const abiDecoder = require('abi-decoder');
+//const abiDecoder = require('abi-decoder');
 import abiDecoder from 'abi-decoder';
 
 const web3 = new Web3('http://59.6.236.50:7545');
