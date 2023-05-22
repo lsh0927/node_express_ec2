@@ -61,9 +61,9 @@ app.use(express.json());
   app.get('/getData', async (req, res) => {
     const result = await contract.methods.getMessage().call();
    const data = {
-      person: result.person,
-      vote: result.vote,
-      time: result.time
+      major: result.major,
+      num: result.num,
+      name: result.name
      };
    
      res.send(data);
